@@ -14,7 +14,8 @@ class ProductList extends StatelessWidget {
             children: <Widget>[
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/ProductScreen', arguments: product);
+                  Navigator.pushNamed(context, '/ProductScreen',
+                      arguments: product);
                 },
                 child: Container(
                   height: 100,

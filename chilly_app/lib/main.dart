@@ -13,17 +13,21 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
-          primaryColor: Color(0xFFFCEDE9),
-          accentColor: Color(0xFFFE9701),
+          primaryColor: Colors.white,
+          accentColor: Color(0xFFEF8974),
           backgroundColor: Color(0xFFFCEDE9),
           highlightColor: Color(0xFF780A16),
           cardColor: Color(0xFFEF8974),
           iconTheme: IconThemeData(color: Color(0xFFEF8974)),
+          buttonColor: Colors.white,
         ),
         initialRoute: '/HomeScreen',
         routes: {
           '/HomeScreen': (context) => HomeScreen(),
-          '/CategoryScreen': (context) => CategoryScreen(),
+          '/CategoryScreen': (context, animation, secondaryAnimation) => CategoryScreen(),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+
+          },
           '/ProductScreen': (context) => ProductScreen(),
         });
   }
